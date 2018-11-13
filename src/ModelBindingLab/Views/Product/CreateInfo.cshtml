@@ -1,0 +1,15 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="CreateInfo">
+    <input name="name" />
+    <input name="price" />
+    <input name="maker.name" />
+    <input name="maker.country" />
+    <button type="submit">Send</button>
+</form>

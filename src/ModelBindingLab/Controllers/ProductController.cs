@@ -57,6 +57,21 @@ namespace ModelBindingLab.Controllers
             return View("List", model);
         }
 
+
+        [Route("/Create/info")]
+        [HttpGet]
+        public IActionResult CreateInfo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/Create/Info")]
+        public IActionResult CreateInfo(ProductInfo model)
+        {
+            return View("Info", model);
+        }
+
         [HttpGet]
         public IActionResult Upload()
         {

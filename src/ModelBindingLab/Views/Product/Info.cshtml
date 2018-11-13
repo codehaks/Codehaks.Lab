@@ -1,0 +1,12 @@
+﻿@model ModelBindingLab.Models.ProductInfo
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+Name : @Model.Name
+<br />
+Price : @Model.Price
+<hr />
+Maker : @Model.Maker.Name (@Model.Maker.Country)
