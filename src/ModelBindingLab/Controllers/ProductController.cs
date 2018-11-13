@@ -72,6 +72,19 @@ namespace ModelBindingLab.Controllers
             return View("Info", model);
         }
 
+        [Route("/Create/full")]
+        public IActionResult CreateFull()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/Create/full")]
+        public IActionResult CreateFull(Product product,Maker maker,IFormFile file,string note)
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Upload()
         {
