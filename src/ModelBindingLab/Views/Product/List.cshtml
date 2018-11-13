@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ModelBindingLab.Models.Product>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+<hr />
+
+
+@foreach (var item in Model)
+{
+    <p>
+        @item.Name (@item.Price $)
+    </p>
+}
