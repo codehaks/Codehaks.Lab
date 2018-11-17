@@ -18,20 +18,22 @@ namespace ModelBindingLab.Controllers
             return View();
         }
 
- 
+         //[Route("product/create/{name}/{price}")]
+
+         
         public IActionResult Create(string name,int price)
         {
+            // Check valiation
             // Save to database
+
             ViewData["name"] = name;
             ViewData["price"] = price;
             return View("Details");
         }
-        public IActionResult Create1(string name, int price)
+        public IActionResult Create1()
         {
-            // Save to database
-            ViewData["name"] = name;
-            ViewData["price"] = price;
-            return View("Details");
+       
+            return View("Create");
         }
         public IActionResult Create2(Product model)
         {
