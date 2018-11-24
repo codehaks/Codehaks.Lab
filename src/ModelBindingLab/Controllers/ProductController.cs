@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ModelBindingLab.Common;
 using ModelBindingLab.Models;
 
 namespace ModelBindingLab.Controllers
@@ -35,11 +36,11 @@ namespace ModelBindingLab.Controllers
        
             return View("Create");
         }
-        public IActionResult Create2(Product model)
+        public IActionResult Create2([ModelBinder(typeof(ProductBinder))]Product product)
         {
             // Save to database
-            ViewData["name"] = model.Name;
-            ViewData["price"] = model.Price;
+            ViewData["name"] = product.Name;
+            ViewData["price"] = product.Price;
             return View("Details");
         }
 
