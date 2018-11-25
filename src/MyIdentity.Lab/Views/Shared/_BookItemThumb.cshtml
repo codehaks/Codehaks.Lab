@@ -1,0 +1,10 @@
+﻿@model Bookit.Models.Book
+
+
+<div class="col-sm-3">
+    <img src="@Model.ImagePath" alt="@Model.ImagePath" class="img-responsive" />
+    <p>
+        <a asp-action="more" asp-route-bookId="@Model.Id" asp-controller="Book" asp-area="" class="btn btn-primary">More...</a>
+
+    </p>
+</div>

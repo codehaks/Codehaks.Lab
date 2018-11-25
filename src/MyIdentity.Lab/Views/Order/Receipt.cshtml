@@ -1,0 +1,56 @@
+﻿@model Bookit.Models.Order
+
+@{
+    ViewData["Title"] = "Receipt";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCreated)
+        </dt>
+        <dd>
+            @Model.TimeCreated.ToShortDateString()
+        </dd>
+    </dl>
+</div>
+<div>
+ 
+    <a asp-action="Gallery" asp-controller="Book" asp-area="">Back to Gallery</a>
+</div>
