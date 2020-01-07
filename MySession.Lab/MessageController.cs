@@ -18,7 +18,8 @@ namespace MySession.Lab
             var message = $"Welcome to me at {DateTime.Now.ToShortTimeString()}";
             HttpContext.Response.Cookies.Append("message", message, new Microsoft.AspNetCore.Http.CookieOptions {
                 //Domain = "codehaks.com",
-                Expires=DateTimeOffset.Now.AddSeconds(20),
+                Path = "/shop",
+                Expires=DateTimeOffset.Now.AddSeconds(10),                
                             
             });
             return Ok(message);
